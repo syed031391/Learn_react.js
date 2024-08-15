@@ -6,7 +6,7 @@ export default function Profile() {
 
     let content;
 
-    if (user.username === '' || user.password === '') {
+    if (user.username === '' && user.password === '') {
         content = <h3>Please log in</h3>;
     } else {
         content = <h3 style={{color:'red'}}>Welcome {user.username}</h3>;

@@ -14,11 +14,12 @@ export default function TodoForm() {
   return (
 
    
-    <div>
-    <input type="text" placeholder="Add a new task" class="w-full p-2 rounded-lg bg-white/50 placeholder-gray-200 text-white focus:outline-none focus:ring-2 focus:ring-white/70 mb-4" />
-      <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded-lg shadow-md transition-colors duration-300">
-        Add Task
-      </button>
+    <div className=' flex justify-center text-slate-500 font-mono font-bold'>
+      <input type="text" placeholder='Add Todo' value={todo} onChange={(e)=>setTodo(e.target.value)}
+      className='max-w-full p-2 rounded-sm  outline-none shadow-lg bg-white/30  border-black' 
+      />
+      <button className='p-2 rounded-sm shadow-lg bg-white/30  border-black'
+      onClick={addhandler} >Add</button>
     </div>
 
   )
